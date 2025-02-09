@@ -11,7 +11,7 @@ const containerVariants = {
   },
 };
 
-var projectProps = {
+const projectProps = {
   title: "Portfolio website",
   description: "This is my Personal Portfolio website.",
   tech: ["NextJS", "Azure", "TailwindCSS"],

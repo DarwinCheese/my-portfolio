@@ -11,7 +11,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}   // Fade in and slide down
                 transition={{ duration: 1 }}      // Duration of 1 second
             >
-                Hi, I'm Darwin Gutierrez
+                {"Hi, I'm Darwin Gutierrez"}
             </motion.h1>
 
             <motion.p

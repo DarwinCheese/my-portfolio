@@ -5,7 +5,19 @@ const cardVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const ProjectCard = ({ title, description, tech, link, repo }: any) => (
+type ProjectProps = {
+  title: string;
+  description: string;
+  tech: Technologies[];
+  link: string;
+  repo: string;
+};
+
+type Technologies = {
+  title: string;
+};
+
+const ProjectCard = ({ title, description, tech, link, repo }: ProjectProps) => (
   <motion.div
     className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300"
     variants={cardVariants}
@@ -17,9 +29,9 @@ const ProjectCard = ({ title, description, tech, link, repo }: any) => (
     <h3 className="text-2xl font-bold mb-2">{title}</h3>
     <p className="text-gray-600 mb-4">{description}</p>
     <div className="flex flex-wrap gap-2 mb-4">
-      {tech.map((t: any) => (
-        <span key={t} className="bg-blue-100 text-blue-800 px-2 py-1 rounded-md text-sm">
-          {t}
+      {tech.map((t: Technologies) => (
+        <span key={t.title} className="bg-blue-100 text-blue-800 px-2 py-1 rounded-md text-sm">
+          {t.title}
         </span>
       ))}
     </div>
